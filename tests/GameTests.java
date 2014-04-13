@@ -20,4 +20,16 @@ public class GameTests {
 		assertThat(didWin,equalTo(false));
 	}
 
+	@Test
+	public void game_is_playable_when_there_are_two_players() {
+		boolean isPlayable = false;
+		Game aGame = new Game();
+		
+		aGame.add("Rola");
+		aGame.add("Shira");
+		isPlayable = aGame.isPlayable();
+		
+		assertThat(isPlayable, equalTo(true));		
+	}
+
 }
